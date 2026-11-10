@@ -11,17 +11,14 @@ const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
 #[component]
 pub fn Navbar() -> Element {
     rsx! {
-        document::Link { rel: "stylesheet", href: NAVBAR_CSS }
-
-        div {
-            id: "navbar",
+        // document::Link { rel: "stylesheet", href: NAVBAR_CSS }
+        div { id: "navbar", class: "border border-black",
+            Link { to: Route::Home {}, "Home" }
             Link {
-                to: Route::Home {},
-                "Home"
-            }
-            Link {
-                to: Route::Blog { id: 1 },
-                "Blog"
+                to: Route::Component {
+                    name: "Button".to_string(),
+                },
+                "Components"
             }
         }
 
