@@ -9,8 +9,6 @@
     monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-black: #000;
-<<<<<<< HEAD
-=======
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
@@ -21,7 +19,6 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -215,12 +212,9 @@
       max-width: 96rem;
     }
   }
-<<<<<<< HEAD
-=======
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .block {
     display: block;
   }
@@ -236,6 +230,12 @@
   .table {
     display: table;
   }
+  .w-\[25px\] {
+    width: 25px;
+  }
+  .max-w-fit {
+    max-width: fit-content;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -245,33 +245,21 @@
   .resize {
     resize: both;
   }
-<<<<<<< HEAD
-  .columns-2 {
-    columns: 2;
-  }
-=======
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
   }
-<<<<<<< HEAD
-=======
   .items-center {
     align-items: center;
   }
   .gap-x-3 {
     column-gap: calc(var(--spacing) * 3);
   }
-  .gap-y-4 {
-    row-gap: calc(var(--spacing) * 4);
-  }
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
   }
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -282,28 +270,15 @@
   .border-red-500 {
     border-color: var(--color-red-500);
   }
-<<<<<<< HEAD
-  .text-center {
-    text-align: center;
-  }
-=======
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -313,7 +288,6 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .underline {
     text-decoration-line: underline;
   }
@@ -347,13 +321,10 @@
   inherits: false;
   initial-value: solid;
 }
-<<<<<<< HEAD
-=======
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -368,10 +339,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
-<<<<<<< HEAD
-=======
       --tw-font-weight: initial;
->>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
       --tw-outline-style: solid;
     }
   }
