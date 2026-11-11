@@ -1,7 +1,7 @@
 use crate::Route;
 use dioxus::prelude::*;
 
-const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
+// const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
 
 /// The Navbar component that will be rendered on all pages of our app since every page is under the layout.
 ///
@@ -12,11 +12,11 @@ const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
 pub fn Navbar() -> Element {
     rsx! {
         // document::Link { rel: "stylesheet", href: NAVBAR_CSS }
-        div { id: "navbar", class: "border border-black",
+        nav { id: "navbar", class: "flex gap-x-3 py-4",
             Link { to: Route::Home {}, "Home" }
             Link {
                 to: Route::Component {
-                    name: "Button".to_string(),
+                    name: "button".to_string(),
                 },
                 "Components"
             }

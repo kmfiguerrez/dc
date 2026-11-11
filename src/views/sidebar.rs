@@ -9,18 +9,6 @@ pub fn Sidebar() -> Element {
 
     rsx! {
         div { class: "flex flex-col border border-black",
-            // Link {
-            //     to: Route::Component {
-            //         name: "accordion".to_string(),
-            //     },
-            //     "Button"
-            // }
-            // Link {
-            //     to: Route::Component {
-            //         name: "alert".to_string(),
-            //     },
-            //     "Card"
-            // }
             for component in components {
                 {
                     let name = component.to_lowercase();
