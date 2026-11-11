@@ -5,7 +5,7 @@ use crate::components::button::{Button, ButtonVariant, ButtonSize};
 #[component]
 pub fn ButtonPage() -> Element {
     rsx! {
-        div { class: "flex flex-col gap-y-5",
+        div { class: "flex flex-col gap-y-8",
 
             div {
                 h1 { class: "text-3xl font-bold", "Button" }
@@ -52,19 +52,21 @@ pub fn ButtonPage() -> Element {
                     }
                 }
             }
+
+            div {
+                h2 { class: "text-xl font-bold", "Disabled" }
+                p { class: " mb-4",
+                    "Add the "
+                    code { "disabled" }
+                    " prop to the "
+                    code { "Button" }
+                    " component to disable the button."
+                }
+
+                Button { disabled: true, "Disabled" }
+            
+            }
         
-        // Button { variant: ButtonVariant::Primary, "Save" }
-
-        // Button {
-        //     variant: ButtonVariant::Destructive,
-        //     size: ButtonSize::Large,
-        //     on_click: move |_| {
-        //         println!("Delete clicked!");
-        //     },
-        //     "Delete"
-        // }
-
-        // Button { disabled: true, "Disabled" }
         }
     }
 }
