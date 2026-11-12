@@ -3,16 +3,30 @@ use dioxus::prelude::*;
 // Temporary CSS loading.
 const ACCORDION_CSS: Asset = asset!("/assets/styling/accordion.css");
 
+#[derive(Clone, Copy, PartialEq, Default)]
+pub enum AccordionMode {
+    #[default]
+    Single,
+    Multiple,
+}
+
 #[derive(Clone, PartialEq)]
 struct AccordionContext {
+    mode: AccordionMode,
     open_items: Signal<Vec<String>>,
 }
 
 #[component]
-pub fn Accordion(children: Element) -> Element {
-     let open_items = use_signal(|| Vec::<String>::new());
+pub fn Accordion(
+    #[props(default)]
+    mode: AccordionMode,
+
+    children: Element,
+) -> Element {
+    let open_items = use_signal(|| Vec::<String>::new());
 
     use_context_provider(|| AccordionContext {
+        mode,
         open_items,
     });
 
@@ -54,19 +68,39 @@ pub fn AccordionTrigger(children: Element) -> Element {
         .read()
         .contains(&item.value);
 
-    // We cloned item.value because it is captured inside the toggle closure.
+    // item.value is cloned because it is captured in the closure.
     let item_value = item.value.clone();
+    // accordion.mode is reassigned because it is captured in the closure.
+    let mode = accordion.mode;
 
     let toggle = move |_| {
         // Signal<T> is a handle that implements Copy trait.
+        // accordion.open_items is assigned to open_items to avoid capturing the accordion variable.
         let mut open_items = accordion.open_items;
-        // write() obtains mutable access to the vector stored inside that signal.
+        // write() obtains mutable access to the vector stored inside that signal.        
         let mut items = open_items.write();
 
-        if let Some(index) = items.iter().position(|value| value == &item_value) {
-            items.remove(index);
-        } else {
-            items.push(item_value.clone());
+        let existing_index = items
+            .iter()
+            .position(|value| value == &item_value);
+
+        match mode {
+            AccordionMode::Single => {
+                if existing_index.is_some() {
+                    items.clear();
+                } else {
+                    items.clear();
+                    items.push(item_value.clone());
+                }
+            }
+
+            AccordionMode::Multiple => {
+                if let Some(index) = existing_index {
+                    items.remove(index);
+                } else {
+                    items.push(item_value.clone());
+                }
+            }
         }
     };
 
