@@ -9,7 +9,7 @@ use crate::components::{
 #[component]
 pub fn CardPage() -> Element {
     rsx! {
-        div { class: "flex flex-col gap-y-5",
+        div { class: "flex flex-col gap-y-8",
 
             div {
                 h1 { class: "text-3xl font-bold", "Card" }
