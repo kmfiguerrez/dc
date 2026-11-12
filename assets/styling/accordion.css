@@ -1,0 +1,30 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accordion-item {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-trigger {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-trigger:hover {
+    background: #f3f4f6;
+}
+
+.accordion-content {
+    padding: 0 16px 16px;
+}

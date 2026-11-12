@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::components::{ButtonPage, CardPage, SwitchPage};
+use crate::components::{ButtonPage, CardPage, SwitchPage, AccordionPage};
 
 #[component]
 pub fn Component(name: String) -> Element {
@@ -11,6 +11,8 @@ pub fn Component(name: String) -> Element {
             CardPage {}
         } else if name == "switch" {
             SwitchPage {}
+        } else if name == "accordion" {
+            AccordionPage {}
         } else {
             "{name}"
         }

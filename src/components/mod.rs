@@ -9,6 +9,7 @@ pub mod button;
 pub mod stack;
 pub mod card;
 pub mod switch;
+pub mod accordion;
 
 
 // Display components
@@ -20,3 +21,6 @@ pub use card_page::CardPage;
 
 mod switch_page;
 pub use switch_page::SwitchPage;
+
+mod accordion_page;
+pub use accordion_page::AccordionPage;
