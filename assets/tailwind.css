@@ -12,12 +12,8 @@
 <<<<<<< HEAD
 =======
     --spacing: 0.25rem;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
@@ -233,21 +229,13 @@
   .grid {
     display: grid;
   }
-  .table {
-    display: table;
-  }
-  .w-\[25px\] {
-    width: 25px;
-  }
   .max-w-fit {
     max-width: fit-content;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+<<<<<<< HEAD
   .resize {
     resize: both;
   }
@@ -257,6 +245,8 @@
   }
 =======
 >>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
+=======
+>>>>>>> 9a2c77b5bd6c705d8b50a7cdbb1860d4613ed946
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -271,8 +261,8 @@
   .gap-x-3 {
     column-gap: calc(var(--spacing) * 3);
   }
-  .gap-y-5 {
-    row-gap: calc(var(--spacing) * 5);
+  .gap-y-8 {
+    row-gap: calc(var(--spacing) * 8);
   }
 >>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .border {
@@ -308,6 +298,7 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+<<<<<<< HEAD
 >>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
   .underline {
     text-decoration-line: underline;
@@ -316,6 +307,8 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+=======
+>>>>>>> 9a2c77b5bd6c705d8b50a7cdbb1860d4613ed946
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -348,12 +341,15 @@
   syntax: "*";
   inherits: false;
 }
+<<<<<<< HEAD
 >>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+=======
+>>>>>>> 9a2c77b5bd6c705d8b50a7cdbb1860d4613ed946
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -366,8 +362,11 @@
 <<<<<<< HEAD
 =======
       --tw-font-weight: initial;
+<<<<<<< HEAD
 >>>>>>> 16215c854db430ff4d1446d9e2b22e07087c2293
       --tw-outline-style: solid;
+=======
+>>>>>>> 9a2c77b5bd6c705d8b50a7cdbb1860d4613ed946
     }
   }
 }

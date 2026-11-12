@@ -8,6 +8,7 @@ pub use hero::Hero;
 pub mod button;
 pub mod stack;
 pub mod card;
+pub mod switch;
 
 
 // Display components
@@ -16,3 +17,6 @@ pub use button_page::ButtonPage;
 
 mod card_page;
 pub use card_page::CardPage;
+
+mod switch_page;
+pub use switch_page::SwitchPage;
