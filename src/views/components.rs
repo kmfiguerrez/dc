@@ -6,8 +6,11 @@ use dioxus::prelude::*;
 #[component]
 pub fn Components() -> Element {
     rsx! {
-        div { class: "grid grid-cols-2 border border-red-500",
-            Sidebar {}
+        div { class: "flex border border-red-500",
+            div { class: "basis-[20vw]",
+                Sidebar {}
+                {}
+            }
             div { Outlet::<Route> {} }
         
         }

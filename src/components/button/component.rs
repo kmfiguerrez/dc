@@ -35,7 +35,7 @@ pub fn Button(
     class: String,
 
     #[props(default)]
-    on_click: Option<EventHandler<MouseEvent>>,
+    onclick: Option<EventHandler<MouseEvent>>,
 
     children: Element,
 ) -> Element {
@@ -64,7 +64,7 @@ pub fn Button(
             disabled,
 
             onclick: move |event| {
-                if let Some(handler) = on_click {
+                if let Some(handler) = onclick {
                     handler.call(event);
                 }
             },
